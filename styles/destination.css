@@ -258,6 +258,8 @@
 
     
     .header__menu{
+        display: flex;
+        align-items: center;
         right: -40rem;
         top: 3.2rem;
         width: 40rem;
