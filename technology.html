@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/technology.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Barlow+Semi+Condensed:wght@400;500;700&family=Bellefair&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+  <div class="whale-section">
+    <header class="header">
+      <div class="header__logo">
+        <a href="./index.html"><img src="./assets/shared/logo.svg" alt="Logo" class="logo-img"></a>
+      </div>
+      <nav class="header__menu">
+        <ul class="header__menu__list">
+          <svg onclick="closeMenu()" class="close-icon mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="21">
+            <g fill="#D0D6F9" fill-rule="evenodd">
+              <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/>
+              <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/>
+            </g>
+          </svg>
+          <li><a href="./index.html"><span class="text-space">00</span>  Home</a></li>
+          <li><a href="./destination.html"><span class="text-space">01</span> Destination</a></li>
+          <li><a href="./crew.html"><span class="text-space">02</span> Crew</a></li>
+          <li class="selected"><a href="./technology.html"><span class="text-space">03</span> Technology</a></li>
+        </ul>
+      </nav>
+      <div class="header__humburger mobile">
+        <svg onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+          <g fill="#D0D6F9" fill-rule="evenodd">
+            <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/>
+          </g>
+        </svg>
+      </div>
+    </header>
+    <main class="content">
+      <div class="content__head">
+        <h2><span class="space-num">03</span> Space launch 101</h2>
+      </div>
+      <div class="content__technology tech">
+        <div class="tech__image">
+          <img class="mobile  mobile__img" src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="Launch vehicle image" />
+          <img class="device" src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="Launch vehicle image" />
+        </div>
+        <div class="tech__bottom">
+          <div class="tech__list">
+            <ul>
+              <li class="tselect" id="one" onclick="takeFromJson('Launch vehicle', 'one')">1</li>
+              <li id="two" onclick="takeFromJson('Spaceport', 'two')">2</li>
+              <li id="three" onclick="takeFromJson('Space capsule', 'three')">3</li>
+            </ul>
+          </div>
+          <div class="tech__tect">
+            <p class="static-tech">The terminology...</p>
+            <p class="tech__name">Launch vehicle</p>
+            <p class="tech__description">
+              A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+              payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+              WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+              it's quite an awe-inspiring sight on the launch pad!
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./JS/technology.js"></script>
+</body>
+</html>

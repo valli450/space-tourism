@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Barlow+Semi+Condensed:wght@400;500;700&family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../starter-code/styles/destination.css" type="text/css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+  <div class="whale-section">
+    <header class="header">
+      <div class="header__logo">
+        <a href="./index.html"><img src="./assets/shared/logo.svg" alt="Logo" class="logo-img"></a>
+      </div>
+      <nav class="header__menu">
+        <ul class="header__menu__list">
+          <svg onclick="closeMenu()" class="close-icon mobile" xmlns="http://www.w3.org/2000/svg" width="20" height="21">
+            <g fill="#D0D6F9" fill-rule="evenodd">
+              <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/>
+              <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/>
+            </g>
+          </svg>
+          <li><a href="./index.html"><span class="text-space">00</span>  Home</a></li>
+          <li class="selected"><a href="./destination.html"><span class="text-space">01</span> Destination</a></li>
+          <li><a href="./crew.html"><span class="text-space">02</span> Crew</a></li>
+          <li><a href="./technology.html"><span class="text-space">03</span> Technology</a></li>
+        </ul>
+      </nav>
+      <div class="header__humburger mobile">
+        <svg onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+          <g fill="#D0D6F9" fill-rule="evenodd">
+            <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/>
+          </g>
+        </svg>
+      </div>
+    </header>
+    <main class="content">
+      <div class="content__txt-about txt-about">
+        <div class="txt-about__head">
+          <h2><span class="space-num">01</span> Pick your destination</h2>
+        </div>
+        <div class="txt-about__image">
+          <img src="./assets/destination/image-moon.png" alt="Europa image"/>
+        </div>
+      </div>
+      <div class="content__distance distance">
+        <div class="distance__list">
+          <ul>
+            <li class="pSelected" onclick="takeFromJson('Moon')">Moon</li>
+            <li onclick="takeFromJson('Mars')">Mars</li>
+            <li onclick="takeFromJson('Europa')">Europa</li>
+            <li onclick="takeFromJson('Titan')">Titan</li>
+          </ul>
+        </div>
+        <div class="distance__about">
+          <h2>Moon</h2>
+          <p>
+            See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+            regain perspective and come back refreshed. While you’re there, take in some history 
+            by visiting the Luna 2 and Apollo 11 landing sites.
+          </p>
+        </div>
+        <div class="distance__block">
+          <div class="distance__km">
+            <p class="distance__text">Avg. distance</p>
+            <h3 class="distance__num">384,400 km</h3>
+          </div>
+          <div class="distance____time">
+            <p class="distance__text">Est. travel time</p>
+            <h3 class="distance__num">3 days</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="text/javascript" src="./JS/main-destination.js"></script>
+</body>
+</html>
